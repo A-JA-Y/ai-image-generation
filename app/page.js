@@ -15,6 +15,18 @@ export default function Home() {
           </a>
         </div>
       </nav>
+      
+      <footer className="w-full flex items-center justify-center dark:bg-zinc-800 bg-gray-200 text-black dark:text-white">
+        <p className="text-sm font-sans py-4 px-3">
+          Made with ❤️ by{" "}
+          <a
+            href="https://github.com/A-JA-Y"
+            target="_blank"
+          >
+            A-JA-Y
+          </a>
+        </p>
+      </footer>
     </>
   );
 }
