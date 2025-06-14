@@ -16,7 +16,7 @@ export default function Home() {
           </a>
         </div>
       </nav>
-      <main className="flex flex-col items-center justify-center h-[78vh]">
+      <main className="flex flex-col items-center justify-center sm:h-[78vh] h-screen">
         <InputBox />
       </main>
 

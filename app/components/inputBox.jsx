@@ -4,7 +4,7 @@ const InputBox = () => {
   return (
     <>
      
-    <div className="flex items-center justify-center w-[70%] sm:h-[25%] h-[10%] p-4 border-1 rounded-3xl shadow-md">
+    <div className="flex items-center justify-center sm:w-[70%] w-[75%] sm:h-[25%] h-[10%] p-4 border-1 rounded-3xl shadow-md">
 
         <input
           type="text"
