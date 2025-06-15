@@ -22,12 +22,12 @@ export default function Home() {
 
       <footer className="w-full flex items-center justify-center dark:bg-zinc-800 bg-gray-200 text-black dark:text-white">
         <p className="text-sm font-sans py-4 px-3">
-          You will see your output below this
+          Made with ❤️ by{" "}
           <a
             href="https://github.com/A-JA-Y"
             target="_blank"
           >
-            Please give a star if you like this project
+            A-JA-Y
           </a>
         </p>
       </footer>

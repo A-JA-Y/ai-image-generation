@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Image Generation App",
   description: "Ai Image Generation App using Next.js and generative AI",
+  
 };
 
 export default function RootLayout({ children }) {
