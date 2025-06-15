@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/genai": "^1.5.1",
+    "dotenv": "^16.5.0",
+    "fs": "^0.0.1-security",
+    "google": "^2.1.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
