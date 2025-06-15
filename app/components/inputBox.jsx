@@ -4,10 +4,16 @@ import { GoogleGenAI, Modality } from "@google/genai";
 
 const InputBox = () => {
   const [imageUrl, setImageUrl] = useState("");
+  function handleSubmit(e) {
+      e.preventDefault();
+      main();
+      setInputValue("");
+    }
   async function main() {
     const ai = new GoogleGenAI({
       apiKey: "AIzaSyDYyUT96V1ayg23OlUVOH7aLErermIDPFs",
     });
+    
 
     const contents = inputValue;
 
@@ -41,28 +47,30 @@ const InputBox = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center sm:w-[70%] w-[75%] sm:h-[25%] h-[10%] p-4 border-1 rounded-3xl shadow-md">
+      <form className="flex mt-5 items-center justify-center sm:w-[70%] w-[75%] sm:h-[25%] h-[10%] p-4 border-1 rounded-3xl shadow-md" onSubmit={
+        handleSubmit} >
         <input
           type="text"
-          placeholder="Type your prompt here..."
+          placeholder="Type your prompt here and click that button..."
           className=" rounded-lg p-2 w-full outline-0 border-0"
           onChange={handleChange}
         />
         <button
-          className=" cursor-pointer  text-white p-4 rounded-full sm:text-2xl text-lg  mt-2"
-          onClick={main}
+          className=" cursor-pointer  text-white p-4 rounded-full hover:scale-120 transition-all duration-300 sm:text-2xl text-lg  mt-2"
+          type="submit"
         >
-          <i className="ri-send-plane-fill hover:opacity-90  transition-all "></i>
+          <i className="ri-send-plane-fill hover:opacity-90   transition-all "></i>
         </button>
-      </div>
+      </form>
       {imageUrl && (
-        <div className="flex items-center justify-center sm:w-[70%] w-[60%] h-[65%] p-4  shadow-md">
+        <div className=" w-[20rem] py-4">
           <img
             id="generatedImg"
             src={imageUrl}
             alt="Generated"
-            className=" w-[25rem] rounded-3xl pt-6 shadow-lg"
+            className=" w-full rounded-xl drop-shadow-2xl shadow-lg "
           />
+        
         </div>
       )}
     </>
