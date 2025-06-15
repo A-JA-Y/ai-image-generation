@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Image Generation App",
-  description: "Ai Image Generation App using Next.js and generative AI",
+  title: "Ai•GhibliArt•Generator",
+  description: "An Ai•GhibliArt•Generator App using Next.js and generative AI",
   
 };
 

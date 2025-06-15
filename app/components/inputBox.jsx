@@ -15,7 +15,7 @@ const InputBox = () => {
     });
     
 
-    const contents = inputValue;
+    const contents = `${inputValue} in ghibli style, high quality, detailed, 4k, trending on artstation, cinematic lighting, intricate details, vibrant colors, masterpiece, award-winning, hyper-realistic, photorealistic, sharp focus, dynamic composition`;
 
     const response = await ai.models.generateContent({
       model: "gemini-2.0-flash-preview-image-generation",
