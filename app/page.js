@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <nav className="w-full flex items-center justify-between dark:bg-zinc-800 bg-gray-200 text-black dark:text-white">
         <h1 className="sm:text-3xl text-xl font-thin font-sans py-4 px-3 ">
-          Ai•GhibliArt•Generator
+          Ai•AnimeArt•Generator
         </h1>
         <div className="text-2xl   border-l-[40px] border-b-[40px] border-t-[40px] border-r-[40px] border-l-transparent border-b-transparent border-black dark:border-r-white dark:border-t-white w-0 h-0">
           <a
