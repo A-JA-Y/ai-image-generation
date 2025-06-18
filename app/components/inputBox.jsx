@@ -11,6 +11,10 @@ const InputBox = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (!inputValue.trim()) {
+      alert("Please enter a prompt.");
+      return;
+    }
     setLoading(true);
     main();
     setInputValue("");
