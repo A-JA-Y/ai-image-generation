@@ -7,7 +7,7 @@ configDotenv({ path: "./.env" });
 const InputBox = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const apiKey = "AIzaSyDYyUT96V1ayg23OlUVOH7aLErermIDPFs";
+  const apiKey = "AIzaSyCxua_FJrej-GlC8AVQvncceQxv-qfMLMs";
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -19,6 +19,7 @@ const InputBox = () => {
     main();
     setInputValue("");
     e.target.value = "";
+    console.log("Form submitted with value:", inputValue);
   }
 
   async function main() {
@@ -66,7 +67,7 @@ const InputBox = () => {
       >
         <input
           type="text"
-          placeholder="Type your prompt here and click that button..."
+          placeholder="Type your prompt.."
           className="rounded-lg p-2 w-full outline-0 border-0"
           onChange={handleChange}
         />
@@ -79,8 +80,8 @@ const InputBox = () => {
       </form>
       {loading && (
         <div className="flex justify-center items-center mt-4">
-          <div className="loader animate-bounce px-4">••• </div>
-          <p>Generating image...</p>
+          <div className="loader animate-bounce px-4 my-auto">•••</div>
+          <div className="animate-pulse text-sm font-thin text-black dark:text-white ">Generating image...</div>
         </div>
       )}
       {imageUrl && !loading && (
