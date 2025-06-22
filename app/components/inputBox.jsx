@@ -5,7 +5,7 @@ import { configDotenv } from "dotenv";
 configDotenv({ path: "./.env" });
 
 const InputBox = () => {
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState([]);
   const [loading, setLoading] = useState(false);
   const apiKey = "AIzaSyCxua_FJrej-GlC8AVQvncceQxv-qfMLMs";
 
@@ -47,7 +47,7 @@ const InputBox = () => {
         const imageUrl = URL.createObjectURL(
           new Blob([buffer], { type: "image/png" })
         );
-        setImageUrl(imageUrl);
+        setImageUrl((prev) => [...prev, imageUrl]);
         setLoading(false);
       }
     }
@@ -85,13 +85,17 @@ const InputBox = () => {
         </div>
       )}
       {imageUrl && !loading && (
-        <div className="w-[20rem] py-4">
-          <img
-            id="generatedImg"
-            src={imageUrl}
-            alt="Generated"
-            className="w-full rounded-xl drop-shadow-2xl shadow-lg"
-          />
+        <div className=" flex sm:flex-row flex-col flex-wrap items-center justify-center mt-4 gap-4 py-4 scroll-auto overflow-auto w-full px-40 ">
+          {imageUrl.map((url, index) => (
+            
+            <img
+              key={index}
+              id={`generatedImg-${index}`}
+              src={url}
+              alt={`Generated ${index + 1}`}
+              className=" w-80  rounded-xl drop-shadow-2xl shadow-lg"
+            />
+          ))}
         </div>
       )}
     </>
