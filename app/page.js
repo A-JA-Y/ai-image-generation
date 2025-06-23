@@ -16,11 +16,10 @@ export default function Home() {
           </a>
         </div>
       </nav>
-      <main className="flex flex-col items-center justify-center sm:h-[78vh] h-screen">
         <InputBox />
-      </main>
+    
 
-      <footer className="w-full flex items-center justify-center dark:bg-zinc-800 bg-gray-200 text-black dark:text-white">
+      <footer className="w-full  bottom-0 dark:bg-zinc-800 bg-gray-200 text-black dark:text-white">
         <p className="text-sm font-sans py-4 px-3">
           Made with ❤️ by{" "}
           <a
