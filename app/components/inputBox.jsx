@@ -7,7 +7,7 @@ configDotenv({ path: "./.env" });
 const InputBox = () => {
   const [imageUrl, setImageUrl] = useState([]);
   const [loading, setLoading] = useState(false);
-  const apiKey = "AIzaSyCC5kksLlviiWg8lAFZG1BB0nFrmbSIDzM";
+  const apiKey = "AIzaSyDp1Jfuns4YTKxu8AUI9j12CXLxRdH7O58";
 
   function handleSubmit(e) {
     e.preventDefault();
